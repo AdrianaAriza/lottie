@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">	
+<head>
+	<title>GifOs</title>
+	<meta charset="utf-8">
+	<meta name="description">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/styles/style1.css" id="cssArchivo" />
+	<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+	<header>
+		<p>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p>
+	</header>
+	<main>
+		<article>
+			<section class="buttons-section">
+				<a href="/index.html"><img src="/assets/gifOF_logo.png" alt="logo" id="logo"></a>
+				<div class=buttons>
+					<form action="upload.html">
+						<input type="submit" value="Crear Guifos" class="button" id="button1">
+					</form>
+					<div id="theme">
+						<button type="button" class="button" id="button2" value="elegir-tema" id="choose-style">Elegir
+							tema</button>
+						<input type="checkbox" id="btn-menu">
+						
+						<label for="btn-menu"><i class="fas fa-caret-down" id="dropdown"></i></label>
+						<nav class="menu">
+							<ul>
+								<li><a href="#" onclick="cambiarArchivoCss('/styles/style1.css');"><span
+											class="under1">S</span>aylor Day</a></li>
+								<li><a href="#" onclick="cambiarArchivoCss('/styles/style2.css');"><span
+											class="under2">S</span>aylor Night</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<button type="button" id="button3" value="link1" id="mis-gifos"><u>M</u>is Guifos</button>
+			</section>
+			<section id="search">
+				<div id="main-search">
+					<form action="" id="search-form">
+						<h1 id="search-tittle">&nbsp Buscar</h1>
+						<label>
+							<input type="text" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…" id="search-input" autocomplete="off"> 
+						</label>
+						<button type="submit" id="search-button"><img id="lens" alt="lents"src="/assets/lupa_inactive.svg" />Buscar</button>
+						<div id="searchSuggestions">
+						</div>
+					</form>
+				</div>
+				<div id="masbotones">
+					
+				</div>
+				<div class="results-container">
+					<div id="search-results">
+					</div>
+				</div>
+
+			</section>
+			<section id="suggestions">
+				<div class="results-container">
+					<label>
+						<input type="text" class="section-tittle" value="   Hoy te sugerimos:" disabled="disabled">
+					</label>
+					<div id="suggest-results">
+					</div>
+					<div id="suggest-search">
+					</div>
+				</div>
+			</section>
+			<section id="tredning">
+				<div class="results-container">
+					<label>
+						<input type="text" class="section-tittle" value="   Tendencias:"  disabled="disabled">
+					</label>
+					<div id="trend-image">
+					</div>
+				</div>
+
+			</section>
+		</article>
+	</main>
+	<script src="script/search.js"></script>
+	<script src="script/trends.js"></script>
+	<script src="script/sugest.js"></script>
+</body>
+
+</html>

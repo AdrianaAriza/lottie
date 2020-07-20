@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GifOs</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="/styles/upload.css" />
+    <script src="https://www.webrtc-experiment.com/RecordRTC.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <main>
+        <header>
+            <p>
+                ¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803
+            </p>
+        </header>
+        <article>
+            <section id="top-section">
+                <div id="top-arrow">
+                    <img src="/assets/arrow.svg" alt="back-arrow" id="arrow" />
+                </div>
+                <div>
+                    <img src="/assets/gifOF_logo.png" alt="logo" id="logo" />
+                </div>
+            </section>
+            <section id="create-gif">
+                <div>
+                    <h2>Crear Gifos</h2>
+                </div>
+                <div>
+                    <h3>
+                        <img src="/assets/window img.png" /> Aquí podrás crear tus propios guifos
+                    </h3>
+                    </br>
+                    <p>
+                        Crear tu <strong>guifo</strong> es muy fácil, graba cualquier imagen con tu cámara y obtén guifos personalizados. Los pasos para crear tu guifo son:<br /><br />
+                        <strong>1)</strong> Dar permisos de acceso a la cámara (sólo por el tiempo de uso)<br />
+                        <strong>2)</strong> Capturar tu momento guifo<br />
+                        <strong>3)</strong> Revisar el momento</br>
+                        <strong>4)</strong> Listo para subir y compartir! <br /><br /> ¿Quieres comenzar a crear tu
+                        <strong>guifo</strong> ahora?<br /><br />
+                    </p>
+                </div>
+                <div class="buttons" id="empezar">
+                    <button id="cancel-button" class="cancel-button">Cancelar</button>
+                    <button id="start-button" class="start-button">
+                        Comenzar
+                    </button>
+                </div>
+            </section>
+            <section id="start-gif">
+                <div>
+                    <h2>Crear Gifos</h2>
+                </div>
+                <div class="video">
+                    <video id="video" autoplay></video>
+                </div>
+                <img class="video" id="repeat" />
+                <div class="buttons" id="capturar">
+                    <button id="btn-start-recording" class="start-button">
+                        Capturar
+                    </button>
+                </div>
+                <div class="buttons" id="listo">
+                    <button id="btn-stop-recording" class="start-button" disabled>
+                        Listo
+                    </button>
+                </div>
+                <div class="buttons" id="gifUpload">
+                    <button id="upload-gif" class="start-button">Subir Guifo</button>
+                    <button id="repeatCapture" class="cancel-button">Repetir captura</button>
+                </div>
+            </section>
+            </br>
+        </article>
+        <section id="finishedGif">
+            <div>
+                <h2>Guifo subido con exito</h2>
+            </div>
+            <div class="finalImg">
+                <img class="videoFinished" id="uploadedGif" />
+            </div>
+            <div>
+                <h6>Guifo creado con exito</h6>
+                <button id='copyLink'>
+                    Copiar Enlaece Guifo
+                </button>
+                <button id='download'>
+                    Descargar guifo
+                </button>
+                <div class="buttons">
+                    <button class="start-button">
+                        Listo
+                    </button>
+                </div>
+            </div>
+            <h3 id='textLink'></h3>
+        </section>
+        <section id="trending">
+            <div class="results-container">
+                <div class="section-tittle">
+                    <p>Mis guifos</p>
+                </div>
+                </br>
+                <div id="trend-results"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/script/upload.js"></script>
+    <script src="/script/myGifos.js"></script>
+</body>
+
+</html>
