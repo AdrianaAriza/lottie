@@ -5,6 +5,7 @@
     <title>GifOs</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="/styles/upload.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/progress.css" />
     <script src="https://www.webrtc-experiment.com/RecordRTC.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet" />
@@ -37,7 +38,8 @@
                     </h3>
                     </br>
                     <p>
-                        Crear tu <strong>guifo</strong> es muy fácil, graba cualquier imagen con tu cámara y obtén guifos personalizados. Los pasos para crear tu guifo son:<br /><br />
+                        Crear tu <strong>guifo</strong> es muy fácil, graba cualquier imagen con tu cámara y obtén
+                        guifos personalizados. Los pasos para crear tu guifo son:<br /><br />
                         <strong>1)</strong> Dar permisos de acceso a la cámara (sólo por el tiempo de uso)<br />
                         <strong>2)</strong> Capturar tu momento guifo<br />
                         <strong>3)</strong> Revisar el momento</br>
@@ -54,19 +56,24 @@
             </section>
             <section id="start-gif">
                 <div>
-                    <h2>Crear Gifos</h2>
+                    <h2 id='head-text'></h2>
                 </div>
                 <div class="video">
                     <video id="video" autoplay></video>
                 </div>
                 <img class="video" id="repeat" />
                 <div class="buttons" id="capturar">
+                    <div id="camera"><img src="./assets/camera.svg" alt="camera" id="camera-img">
+                    </div>
                     <button id="btn-start-recording" class="start-button">
                         Capturar
                     </button>
                 </div>
                 <div class="buttons" id="listo">
-                    <button id="btn-stop-recording" class="start-button" disabled>
+                    <div id="stop-img">
+                        <img src="./assets/recording.svg" alt="recording" id="recording-img">
+                    </div>
+                    <button id="btn-stop-recording" class="listo-button" disabled>
                         Listo
                     </button>
                 </div>
@@ -77,33 +84,54 @@
             </section>
             </br>
         </article>
-        <section id="finishedGif">
+        <section id="finishedGif" class="finishedGif">
             <div>
                 <h2>Guifo subido con exito</h2>
             </div>
-            <div class="finalImg">
-                <img class="videoFinished" id="uploadedGif" />
-            </div>
-            <div>
-                <h6>Guifo creado con exito</h6>
-                <button id='copyLink'>
-                    Copiar Enlaece Guifo
-                </button>
-                <button id='download'>
-                    Descargar guifo
-                </button>
-                <div class="buttons">
-                    <button class="start-button">
-                        Listo
+            <div class="rightContent">
+                <div class="finalImg">
+                    <img class="videoFinished" id="uploadedGif" />
+                </div>
+                <div class="finalButtons">
+                    <h4>Guifo creado con exito</h4>
+                    <button id='copyLink' class="cancel-button-3">
+                        Copiar Enlaece Guifo
+                    </button>
+                    <button id='download' class="cancel-button-3">
+                        Descargar guifo
                     </button>
                 </div>
             </div>
-            <h3 id='textLink'></h3>
+            <div class="buttons">
+                <button class="start-button" onclick="window.location.href='./upload.html'">
+                    Listo
+                </button>
+            </div>
+        </section>
+        <section id="uploadVideo">
+            <div class="title">
+                <h2>Subiendo Guifo</h2>
+            </div>
+            <div id="boxCapture">
+                <img id="world" src="./assets/globe_img.png" alt="globe">
+                <div class="uploadText">
+                    <h5>Estamos subiendo tu guifo…</h5>
+                    <h6>Tiempo restante: <del>38 años</del> algunos minutos</h6>
+                </div>
+                <div id="barLoader">
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+            </div>
+            <div class="allButtonCapture">
+                <button class="cancel-button-final" id="final-cancel"
+                    onclick="window.location.href='./upload.html'">Cancelar</button>
+            </div>
         </section>
         <section id="trending">
             <div class="results-container">
                 <div class="section-tittle">
-                    <p>Mis guifos</p>
+                    <p class="section-text">Mis guifos</p>
                 </div>
                 </br>
                 <div id="trend-results"></div>

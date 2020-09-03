@@ -7,7 +7,7 @@
 header{
   width: 100%;
   height: 1.4%;
-  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
   box-shadow: 0 1px 0 0 #110038;
   font-family: 'Chakra Petch', sans-serif;
   font-size: 12px;
@@ -15,7 +15,10 @@ header{
   letter-spacing: 0;
 }
 #logo{
-  content: url(/assets/gifOF_logo.png);  
+  content: url(https://github.com/JORJUELAB/JORJUELAB.github.io-gifOS/blob/master/assets/logo_dark.png?raw=true);  
+}
+body{
+  background: #110038;
 }
 /*Buttons section*/
 .buttons-section{
@@ -37,20 +40,20 @@ header{
 .button{
   width: 7rem;
   height: 2rem;
-  background: #F7C9F3;
+  background: #EE3EFE;
   border: 1px solid #110038;
-  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
   font-family: 'Chakra Petch', sans-serif;
   font-size: 16px;
-  color: #110038;
+  color: #FFFFFF;
   letter-spacing: 0;
   text-align: center;
   line-height: 18px;
   margin-left: 1rem;
 }
 .button:hover{
+  background: #A72CB3;
   cursor: pointer;
-  background: #E6BBE2;
   box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
   border: 1px dotted #110038;
   display: -webkit-box;
@@ -63,10 +66,15 @@ header{
       -ms-flex-align: center;
           align-items: center;
 }
-.button:focus{
+.button:focus,#button3:focus,.more-button:focus, .search-button:focus{
   outline: none;
 }
+/*revisar color de la flecha*/
+label img{
+  color: #FFFFFF;
+}
 #dropdown{
+  color: #ffffff;
   margin-left: 8rem;
   width: 1.5rem;
   height: 2rem;
@@ -74,13 +82,12 @@ header{
   text-align: center;
   padding-top: 0.5%;
   z-index: 1;
-  background: #F7C9F3;
+  background: #EE3EFE;
   border: 1px solid #110038;
   box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
-  
 }
 #dropdown:hover{
-  padding-top: 0;
+  padding-top: 0%;
   cursor: pointer;
   border: 1px dotted #110038;
   display: -webkit-box;
@@ -92,7 +99,8 @@ header{
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #DFB0D5;
+  background: #A72CB3;
+  
 }
 #button2{
   position: absolute;
@@ -106,14 +114,14 @@ header{
   height: 2rem;
   font-family: 'Chakra Petch', sans-serif;
   font-size: 16px;
-  color: #110038;
+  color: #FFFFFF;
   letter-spacing: 0;
   text-align: center;
   line-height: 18px;
 }
 #button3:hover{
   cursor: pointer;
-  border: 1px dotted #110038;
+  border: 1px dotted #FFFFFF;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -123,43 +131,58 @@ header{
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;;
 }
 #button3:active{
     color: #98979D;
     border-style: none;
 }
-#button3:focus{
-  outline: none;
-}
-.under1{
+.under2{
   text-decoration: underline;
 }
 /*User search section and results*/
 #main-search{
-  background: #E6E6E6;
-  box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+  background: #B4B4B4;
+  box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
   margin-left: 6.9%;
   margin-right: 9.7%;
   width: 83.4%;
   height: 6rem;
 }
-#search-button{
-  background: #E6E6E6;
-  box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+.search-button{
+  background: #B4B4B4;
+  border: 1px solid #808080;
+  box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
   width: 7%;
   height: 2.5rem;;
   font-family: 'Chakra Petch', sans-serif;
   font-size: 16px;
-  color: #B4B4B4;
+  color:#8F8F8F;
   letter-spacing: 0;
   line-height: 18px;
 }
-#search-button img{
+.search-button img{
+  content: url(https://raw.githubusercontent.com/JORJUELAB/JORJUELAB.github.io-gifOS/343b7a651ab4416ce502338dc353337f897155c1/assets/combined_shape.svg);
   margin-right: 5%;
+} 
+.search-change{
+  cursor: pointer;
+  width: 7%;
+  height: 2.5rem;
+  background: #A72CB3;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  border: 1px dotted #110038;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 16px;
+  color: #ffffff;
 }
-#main-search h1{
-  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+.search-change img{
+  margin-right: 5%;
+  background-image: url(https://raw.githubusercontent.com/JORJUELAB/JORJUELAB.github.io-gifOS/343b7a651ab4416ce502338dc353337f897155c1/assets/lupa_light.svg);
+}
+
+#main-search h2{
+  background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
   width: 100%;
   height: 24px;
   font-family: 'Chakra Petch', sans-serif;
@@ -167,6 +190,7 @@ header{
   color: #FFFFFF;
   letter-spacing: 0;
   line-height: 1.5rem;
+  padding-left: 0.5rem;
 }
 #search-input{
   width:90%;
@@ -179,21 +203,24 @@ header{
   padding-left: 0.5rem;
   font-family: 'Chakra Petch', sans-serif;
   font-size: 16px;
-  color: #B4B4B4;
+  color: #D6D1D0;
   letter-spacing: 0;
   line-height: 22px;
   outline: none;
 }
-.results-container, #masbotones{
+.results-container, #bluebuttons{
   margin-left: 6.9%;
   margin-right: 9.7%;
   width: 83.4%;
 }
 #search-results{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -moz-column-gap: 20px;
+  column-gap: 20px;
+  row-gap: 10px;
+  grid-template-rows: auto;
 }
 .section-tittle{
   margin-top: 3%;
@@ -214,7 +241,7 @@ header{
   position: absolute;
   z-index: 1;
   margin-top: 1%;
-  background: #E6E6E6;
+  background: #B4B4B4;
   box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
   height: 7.5rem;
 }
@@ -223,7 +250,7 @@ header{
   height: 1.5rem;
   margin-top: 1%;
   margin-left: 1%;
-  background: #F0F0F0;
+  background: #CCCCCC;
   border: 1px solid #808080;
   box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
   font-family: 'Chakra Petch', sans-serif;
@@ -233,7 +260,10 @@ header{
   line-height: 22px;
 }
 .button-searchSuggestions:hover{
-  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  border: 1px dotted #110038;
+  background: #B4AAA8;
+  cursor: pointer;
 }
 .otrosbotones{
   padding: 1rem;
@@ -244,31 +274,45 @@ header{
   color: #FFFFFF;
   letter-spacing: 0;
   line-height: 18px;
-  background: #4180F6;
+  background: #2E32FB;
   border: 1px solid #4C2F99;
-  box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+  box-shadow: inset -2px -2px 0 0 #2124B3, inset 2px 2px 0 0 #FFFFFF;
+}
+.otrosbotones:hover{
+  cursor: pointer;
 }
 /*Trends section*/
 #trend-image{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  -webkit-text-size-adjust: 100%;
-  margin-top: 2rem;
+  padding-top: 20px;
+  width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    row-gap: 10px;
+    grid-template-rows: auto;
+}
+.try{
+  width: 24%;
+  position: relative;
+  padding-top: 1rem;
+}
+.item-trend{
+  width: 100%;
 }
 .item-trend:hover{
-  border: white 3px ridge;
+  cursor: pointer;
+  outline: white 3px ridge;
+  border: 1px dotted #110038;
 }
 .gif-titles{
-  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
-  position: absolute;
   bottom: 0%;
+  position: absolute;
+  background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
   font-family: "ChakraPetch-Bold", sans-serif;
   font-size: 14px;
   color: #FFFFFF;
   letter-spacing: 0;
-  margin-top: -1.4rem;
-  margin-left: 0.2%;
   width: 100%;
 }
 .caja{
@@ -277,30 +321,39 @@ header{
 }
 /*Suggestions section*/
 #suggest-results, #suggest-gifs, #suggest-search{
+  padding-top: 20px;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-top: 3%;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   -moz-column-gap: 20px;
+   column-gap: 20px;
+   row-gap: 10px;
+   grid-template-rows: auto;
 }
 .suggest-item{
-  border: white 5px ridge;
-  width: 100%;
+  outline: white 3px ridge;
+  width: 420%;
 }
+.suggest-item:hover{
+  outline: white 3px ridge;
+  border: 1px dotted #110038;
+  cursor: pointer;
+}
+
 .suggest-gifs{
   width: 23%;
 }
 .suggest-titles{
   border-top: white 1px ridge;
   position: absolute;
-  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
   font-family: "ChakraPetch-Bold", sans-serif;
   font-size: 14px;
   color: #FFFFFF;
   letter-spacing: 0;
-  margin-top: -200px;
-  margin-left: 0.3%;
-  width: 18.6%;
+  margin-top: -204px;
+  width: 19.2%;
+  
 }
 .more-button{
   font-family: 'ChakraPetch', sans-serif;
@@ -316,20 +369,17 @@ header{
   height: 2rem;
   position: absolute;
   z-index: 1;
-  margin-top: 9.5rem;
-  margin-left: -18%;
+  margin-top: -50px;
+  margin-left: 15px;
 }
 .more-button:hover{
   border: 0.00001px dotted #110038;
   cursor: pointer;
 }
-.more-button:focus{
-  outline: none;
-}
 .close{
   position: absolute;
-  margin-top: 0.3rem;
-  margin-left: -1.3rem;
+  margin-top: 0.1rem;
+  margin-left: -1.2rem;
 }
 .gifSuggestSearch{
   padding-top: 1rem;
@@ -347,9 +397,8 @@ header{
   letter-spacing: 0;
   line-height: 22px;
   padding: 0;
-  background: #F0F0F0;
-  border: 1px solid #808080;
-  box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+  background: #B4B4B4;
+  box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
   width: 8.5rem;
   height: 5rem;
   margin-top: 1.7rem;
@@ -361,19 +410,21 @@ header{
 .menu li{
   margin-left: 0.5rem;
   margin-top: 0.5rem;
-  background: #FFF4FD;
-  border: 1px solid #CCA6C9;
-  box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+  color: #110038;
+  background: #CCCCCC;
+  border: 1px solid #808080;
+  box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
   width: 90%;
   height: 37%;
 }
 .menu li:active{
-  background: #F0F0F0;
-  border: 1px solid #808080;
-  box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+  background: #2E32FB;
+  border: 1px solid rgba(51,53,143,0.20);
+  box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+  color: #FFFFFF;
 }
 .menu li a:active{
-  color: #110038;
+  color: #FFFFFF;
 }
 #btn-menu{
   display: none;
@@ -381,10 +432,23 @@ header{
 #btn-menu:checked ~ .menu{
   display: flex;
   margin-left: 1rem;
+
 }
-
-
-
-
-
-
+/*prueba*/
+.change1{
+  background: #EE3EFE;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+  font-family: "ChakraPetch", sans-serif;
+  font-size: 16px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  line-height: 18px;
+  width: 7%;
+  height: 2.5rem;
+  cursor: pointer;
+}
+.change1 img{
+  margin-right: 5%;
+  background-image: url(https://raw.githubusercontent.com/JORJUELAB/JORJUELAB.github.io-gifOS/343b7a651ab4416ce502338dc353337f897155c1/assets/lupa_light.svg);
+}

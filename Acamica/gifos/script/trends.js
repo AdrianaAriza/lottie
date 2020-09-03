@@ -1,12 +1,9 @@
 'use strict'
 
-//Trends
-
 const apikey = 'lCIxyIpyjzmnIETV0Z1M6WMnWOtsdeH3';
 const path = `http://api.giphy.com/v1/gifs/trending?api_key=${apikey}&limit=25`;
 
 function setEvenMouse(id) {
-    //console.log(id);
     let txtTitle = document.getElementById(id);
     txtTitle.style.display = "block";
 }
@@ -27,9 +24,6 @@ function getTrendResults() {
     fetch(path).then((response) => {
         return response.json()
     }).then((json) => {
-        //console.log(json.data[0].images.fixed_width.url);
-        //console.log(json.data[0].title);
-
         const resultsEl = document.getElementById('trend-image');
 
         let resultsHTML = '';
@@ -41,8 +35,6 @@ function getTrendResults() {
             const width = element.images.fixed_height.width;
 
             resultsHTML += getComponentGift(url, element.id, height, element.title, width);
-            //console.log(resultsHTML)
-
         });
         resultsEl.innerHTML = resultsHTML;
 

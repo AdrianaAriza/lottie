@@ -15,6 +15,7 @@ let mygifos = document.getElementById("trending");
 let capturar = document.getElementById("capturar");
 let lsito = document.getElementById("listo");
 let imgfinished = document.getElementById("uploadedGif");
+let uVideo = document.getElementById("uploadVideo");
 let blob, record, preview, recorder, camera, stream, idToSave, blob_url;
 
 repeatButton.onclick = repeatGif;
@@ -29,8 +30,10 @@ uploadButtons.style.display = "none";
 cGif.style.display = "none";
 capturar.style.display = "none";
 lsito.style.display = "none";
+uVideo.style.display = "none";
 
 function requestVideo() {
+    document.getElementById('head-text').textContent = 'Un chequeo antes de empezar'
     capturar.style.display = "block";
     mygifos.style.display = "none";
     createGif.style.display = "none";
@@ -40,14 +43,15 @@ function requestVideo() {
         .getUserMedia({
             video: {
                 width: { ideal: 1000 },
-                height: { min: 432 },
+                height: { max: 480 },
             },
             audio: false,
         })
         .then((stream) => {
             video.srcObject = stream;
             video.play();
-            startButton.onclick = function() {
+            startButton.onclick = function () {
+                document.getElementById('head-text').textContent = 'Capturando Tu Guifo'
                 lsito.style.display = "block";
                 recorder = RecordRTC(stream, {
                     type: "gif",
@@ -66,11 +70,13 @@ function requestVideo() {
         .catch((e) => console.error(e));
 }
 
-document.getElementById("btn-stop-recording").onclick = async function() {
-    recorder.stopRecording(function(record) {
-        console.log("fin de grabacion");
+document.getElementById("btn-stop-recording").onclick = async function () {
+    document.getElementById("stop-img").style.display = 'none';
+    document.getElementById("camera").style.display = 'none';
+    recorder.stopRecording(function (record) {
         preview = record;
     });
+    document.getElementById('head-text').textContent = 'Vista Previa'
     stopButton.style.display = "none";
     uploadButtons.style.display = "block";
     recorder.stream.stop();
@@ -82,27 +88,24 @@ document.getElementById("btn-stop-recording").onclick = async function() {
     uploadButton.style.display = "block";
     blob_url = URL.createObjectURL(blob);
     repeat.src = blob_url;
-    console.log(blob);
 };
 
 function uploadVideo() {
     let form = new FormData();
     form.append("file", blob, "myGifo.git");
-    console.log(form.get("file"));
-    fetchURL(
-        "https://upload.giphy.com/v1/gifs?api_key=89o92Eb4EKKYqo9z1wEcVQ8wsfb5gL1Z", {
-            method: "POST",
-            body: form,
-            headers: {
-                Accept: "application/json",
-            },
-            json: true,
-        }
-    );
     repeat.style.display = "none";
     uploadButtons.style.display = "none";
-    alert("UPLOAD!!!");
-    cGif.style.display = "block";
+    whileChange();
+    fetchURL(
+        "https://upload.giphy.com/v1/gifs?api_key=89o92Eb4EKKYqo9z1wEcVQ8wsfb5gL1Z", {
+        method: "POST",
+        body: form,
+        headers: {
+            Accept: "application/json",
+        },
+        json: true,
+    }
+    );
     repeat.style.display = "block";
     videoScreen.style.display = "none";
     imgfinished.src = repeat.src;
@@ -113,16 +116,11 @@ async function fetchURL(url, params) {
     try {
         const response = await fetch(url, params);
         idToSave = await response.json();
-        console.log(await idToSave.data.id);
         let vector_id = localStorage.getItem("vector_id");
-        console.log("desde getitem");
-        console.log(vector_id);
         if (vector_id === undefined) {
             vector_id = "";
-            console.log("vacio");
         }
         vector_id = vector_id + ", " + idToSave.data.id;
-        console.log(vector_id);
         localStorage.setItem("vector_id", vector_id);
         return response;
     } catch (error) {
@@ -145,12 +143,13 @@ function repeatGif() {
     capturar.style.display = "block";
     startButton.style.display = "block";
     lsito.style.display = "none";
+    document.getElementById("stop-img").style.display = 'block';
+    document.getElementById("camera").style.display = 'block';
     requestVideo();
 }
 
 async function copy() {
     cGif.style.display = "block";
-    console.log("copy");
     await navigator.clipboard.writeText(
         "https://giphy.com/gifs/" + idToSave.data.id
     );
@@ -159,4 +158,13 @@ async function copy() {
 
 function download() {
     recorder.save();
+}
+
+function whileChange() {
+    uVideo.style.display = "block";
+    cGif.style.display = "none";
+    setTimeout(function chageToEnd() {
+        uVideo.style.display = "none";
+        cGif.style.display = "block";
+    }, 3000);
 }

@@ -1,6 +1,5 @@
 "use strict";
 
-//Trends
 let mygif = localStorage.getItem("vector_id");
 const path =
     "http://api.giphy.com/v1/gifs?ids=" +
@@ -13,13 +12,9 @@ function getSuggestResults() {
             return response.json();
         })
         .then((json) => {
-            console.log(json.data[0].images.fixed_width.url);
-
             const resultsEl = document.getElementById("trend-results");
             let resultsHTML = "";
-
             json.data.forEach((element) => {
-                console.log(element);
                 const url = element.images.fixed_width.url;
                 const height = element.images.fixed_height.height;
                 const width = element.images.fixed_width.width;

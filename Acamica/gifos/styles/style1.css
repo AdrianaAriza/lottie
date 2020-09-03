@@ -1,3 +1,4 @@
+
 *{
   box-sizing: border-box;
   margin: 0;
@@ -7,7 +8,7 @@
 header{
   width: 100%;
   height: 1.4%;
-  background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
   box-shadow: 0 1px 0 0 #110038;
   font-family: 'Chakra Petch', sans-serif;
   font-size: 12px;
@@ -15,11 +16,12 @@ header{
   letter-spacing: 0;
 }
 #logo{
-  content: url(/assets/gifOF_logo_dark.png);  
+  content: url(../assets/gifOF_logo.png);  
 }
-body{
-  background: #110038;
+#m{
+  text-decoration: underline;
 }
+
 /*Buttons section*/
 .buttons-section{
   display: flex;
@@ -40,22 +42,21 @@ body{
 .button{
   width: 7rem;
   height: 2rem;
-  background: #EE3EFE;
+  background: #F7C9F3;
   border: 1px solid #110038;
-  box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
   font-family: 'Chakra Petch', sans-serif;
   font-size: 16px;
-  color: #FFFFFF;
+  color: #110038;
   letter-spacing: 0;
   text-align: center;
   line-height: 18px;
   margin-left: 1rem;
 }
 .button:hover{
-  background: #A72CB3;
+  cursor: pointer;
+  background: #E6BBE2;
   box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
-  cursor: pointer;
-  cursor: pointer;
   border: 1px dotted #110038;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -67,15 +68,10 @@ body{
       -ms-flex-align: center;
           align-items: center;
 }
-.button:focus{
+.button:focus,#button3:focus,.more-button:focus, .search-button:focus{
   outline: none;
 }
-/*revisar color de la flecha*/
-label img{
-  color: #FFFFFF;
-}
 #dropdown{
-  color: #ffffff;
   margin-left: 8rem;
   width: 1.5rem;
   height: 2rem;
@@ -83,12 +79,13 @@ label img{
   text-align: center;
   padding-top: 0.5%;
   z-index: 1;
-  background: #EE3EFE;
+  background: #F7C9F3;
   border: 1px solid #110038;
   box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  
 }
 #dropdown:hover{
-  padding-top: 0%;
+  padding-top: 0;
   cursor: pointer;
   border: 1px dotted #110038;
   display: -webkit-box;
@@ -100,8 +97,7 @@ label img{
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #A72CB3;
-  
+  background: #DFB0D5;
 }
 #button2{
   position: absolute;
@@ -115,14 +111,14 @@ label img{
   height: 2rem;
   font-family: 'Chakra Petch', sans-serif;
   font-size: 16px;
-  color: #FFFFFF;
+  color: #110038;
   letter-spacing: 0;
   text-align: center;
   line-height: 18px;
 }
 #button3:hover{
   cursor: pointer;
-  border: 1px dotted #FFFFFF;
+  border: 1px dotted #110038;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -132,45 +128,58 @@ label img{
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
 }
 #button3:active{
     color: #98979D;
     border-style: none;
 }
-#button3:focus{
-  outline: none;
-}
-.under2{
+
+.under1{
   text-decoration: underline;
 }
 /*User search section and results*/
 #main-search{
-  background: #B4B4B4;
-  box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+  background: #E6E6E6;
+  box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
   margin-left: 6.9%;
   margin-right: 9.7%;
   width: 83.4%;
   height: 6rem;
 }
-#search-button{
-  background: #B4B4B4;
-  border: 1px solid #808080;
-  box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+.search-button{
+  background: #E6E6E6;
+  box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
   width: 7%;
-  height: 2.5rem;;
+  height: 2.5rem;
   font-family: 'Chakra Petch', sans-serif;
   font-size: 16px;
-  color:#8F8F8F;
+  color: #B4B4B4;
   letter-spacing: 0;
   line-height: 18px;
 }
-#search-button img{
-  content: url(/assets/combined_shape.svg);
+.search-button img{
   margin-right: 5%;
-} 
-#main-search h1{
-  background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+}
+.search-change{
+  cursor: pointer;
+  width: 7%;
+  height: 2.5rem;
+  background: #E6BBE2;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  border: 1px dotted #110038;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 16px;
+  color: #110038;
+}
+.search-change img{
+  margin-right: 5%;
+  background-image: url(https://raw.githubusercontent.com/JORJUELAB/JORJUELAB.github.io-gifOS/5c14380d4d6488b2208758453d3cd481e89e3aa5/assets/lupa.svg);
+}
+
+
+#main-search h2{
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
   width: 100%;
   height: 24px;
   font-family: 'Chakra Petch', sans-serif;
@@ -178,6 +187,7 @@ label img{
   color: #FFFFFF;
   letter-spacing: 0;
   line-height: 1.5rem;
+  padding-left: 0.5rem;
 }
 #search-input{
   width:90%;
@@ -190,22 +200,26 @@ label img{
   padding-left: 0.5rem;
   font-family: 'Chakra Petch', sans-serif;
   font-size: 16px;
-  color: #B4B4B4;
+  color: #D6D1D0;
   letter-spacing: 0;
   line-height: 22px;
   outline: none;
 }
-.results-container, #masbotones{
+.results-container, #bluebuttons{
   margin-left: 6.9%;
   margin-right: 9.7%;
   width: 83.4%;
 }
 #search-results{
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    row-gap: 10px;
+    grid-template-rows: auto;
 }
+
 .section-tittle{
   margin-top: 3%;
   width: 100%;
@@ -225,7 +239,7 @@ label img{
   position: absolute;
   z-index: 1;
   margin-top: 1%;
-  background: #B4B4B4;
+  background: #E6E6E6;
   box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
   height: 7.5rem;
 }
@@ -234,7 +248,7 @@ label img{
   height: 1.5rem;
   margin-top: 1%;
   margin-left: 1%;
-  background: #CCCCCC;
+  background: #F0F0F0;
   border: 1px solid #808080;
   box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
   font-family: 'Chakra Petch', sans-serif;
@@ -244,7 +258,10 @@ label img{
   line-height: 22px;
 }
 .button-searchSuggestions:hover{
-  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  border: 1px dotted #110038;
+  background: #DAD3D1;
+  cursor: pointer;
 }
 .otrosbotones{
   padding: 1rem;
@@ -255,31 +272,46 @@ label img{
   color: #FFFFFF;
   letter-spacing: 0;
   line-height: 18px;
-  background: #2E32FB;
+  background: #4180F6;
   border: 1px solid #4C2F99;
-  box-shadow: inset -2px -2px 0 0 #2124B3, inset 2px 2px 0 0 #FFFFFF;
+  box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+}
+.otrosbotones:hover{
+  cursor: pointer;
 }
 /*Trends section*/
 #trend-image{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  -webkit-text-size-adjust: 100%;
-  margin-top: 2rem;
+  padding-top: 20px;
+  width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    row-gap: 10px;
+    grid-template-rows: auto;
 }
+.try{
+  width: 24%;
+  position: relative;
+  padding-top: 1rem;
+}
+.item-trend{
+  width: 100%;
+}
+
 .item-trend:hover{
-  border: white 3px ridge;
+  cursor: pointer;
+  outline: white 3px ridge;
+  border: 1px dotted #110038;
 }
 .gif-titles{
-  bottom: 0%;
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
   position: absolute;
-  background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+  bottom: 0%;
   font-family: "ChakraPetch-Bold", sans-serif;
   font-size: 14px;
   color: #FFFFFF;
   letter-spacing: 0;
-  margin-top: -1.4rem;
-  margin-left: 0.2%;
   width: 100%;
 }
 .caja{
@@ -288,15 +320,23 @@ label img{
 }
 /*Suggestions section*/
 #suggest-results, #suggest-gifs, #suggest-search{
+   padding-top: 20px;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-top: 3%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    row-gap: 10px;
+    grid-template-rows: auto;
 }
 .suggest-item{
-  border: white 5px ridge;
-  width: 100%;
+  outline: white 3px ridge;
+  width: 420%;
+}
+.suggest-item:hover{
+  outline: white 3px ridge;
+  border: 1px dotted #110038;
+  cursor: pointer;
 }
 .suggest-gifs{
   width: 23%;
@@ -304,15 +344,13 @@ label img{
 .suggest-titles{
   border-top: white 1px ridge;
   position: absolute;
-  background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
   font-family: "ChakraPetch-Bold", sans-serif;
   font-size: 14px;
   color: #FFFFFF;
   letter-spacing: 0;
-  margin-top: -200px;
-  margin-left: 0.3%;
-  width: 18.6%;
-  
+  margin-top: -204px;
+  width: 19.2%;
 }
 .more-button{
   font-family: 'ChakraPetch', sans-serif;
@@ -321,26 +359,25 @@ label img{
   letter-spacing: 0;
   text-align: center;
   line-height: 18px;
-  background: #2E32FB;
+  background: #4180F6;
   border: 1px solid #4C2F99;
-  box-shadow: inset -2px -2px 0 0 #2124B3, inset 2px 2px 0 0 #FFFFFF;
+  box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
   width: 5rem;
   height: 2rem;
   position: absolute;
   z-index: 1;
-  position: absolute;
-  z-index: 1;
-  margin-top: 9.5rem;
-  margin-left: -18%;
+  margin-top: -50px;
+  margin-left: 15px;
 }
 .more-button:hover{
   border: 0.00001px dotted #110038;
   cursor: pointer;
 }
+
 .close{
   position: absolute;
-  margin-top: 0.3rem;
-  margin-left: -1.4rem;
+  margin-top: 0.1rem;
+  margin-left: -1.2rem;
 }
 .gifSuggestSearch{
   padding-top: 1rem;
@@ -358,8 +395,9 @@ label img{
   letter-spacing: 0;
   line-height: 22px;
   padding: 0;
-  background: #B4B4B4;
-  box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+  background: #F0F0F0;
+  border: 1px solid #808080;
+  box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
   width: 8.5rem;
   height: 5rem;
   margin-top: 1.7rem;
@@ -371,21 +409,19 @@ label img{
 .menu li{
   margin-left: 0.5rem;
   margin-top: 0.5rem;
-  color: #110038;
-  background: #CCCCCC;
-  border: 1px solid #808080;
-  box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+  background: #FFF4FD;
+  border: 1px solid #CCA6C9;
+  box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
   width: 90%;
   height: 37%;
 }
 .menu li:active{
-  background: #2E32FB;
-  border: 1px solid rgba(51,53,143,0.20);
-  box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
-  color: #FFFFFF;
+  background: #F0F0F0;
+  border: 1px solid #808080;
+  box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
 }
 .menu li a:active{
-  color: #FFFFFF;
+  color: #110038;
 }
 #btn-menu{
   display: none;
@@ -393,5 +429,23 @@ label img{
 #btn-menu:checked ~ .menu{
   display: flex;
   margin-left: 1rem;
+}
+/*prueba*/
 
+.change1{
+  background: #F7C9F3;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  font-family: "ChakraPetch", sans-serif;
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
+  line-height: 18px;
+  width: 7%;
+  height: 2.5rem;
+  cursor: pointer;
+}
+.change1 img{
+  margin-right: 5%;
+  background-image: url(https://raw.githubusercontent.com/JORJUELAB/JORJUELAB.github.io-gifOS/5c14380d4d6488b2208758453d3cd481e89e3aa5/assets/lupa.svg);
 }
